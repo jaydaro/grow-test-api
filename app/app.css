@@ -1,0 +1,64 @@
+/* app css stylesheet */
+body {
+    padding: 20px 20px 20px 20px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.polDetail {
+    float: right;
+    position: relative;
+}
+
+
+.polList {
+    float: left;
+    position: relative;
+}
+    .polList .highlightName:hover {
+        background-color: yellow;
+        cursor: pointer;
+    }
+
+.dropdownRep {
+    float: left;
+    position: relative;
+    padding: 5px 5px 5px 5px;
+
+}
+
+.dropdownState {
+    float: left;
+    position: relative;
+    padding: 5px 5px 5px 5px;
+}
+
+.outerTable {
+    float: left;
+    position: absolute;
+    padding: 5px 5px 5px 5px;
+}
+    .outerTable td {
+        padding: 5px 5px 5px 5px;
+        vertical-align: top;
+    }

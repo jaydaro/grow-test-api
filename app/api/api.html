@@ -1,0 +1,96 @@
+
+<div id="apiView">
+<table>
+    <tr>
+        <td>
+           Choose Rep
+        </td>
+        <td>
+            Choose State
+        </td>
+        <td>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+    <div class="dropdownRep">
+        <select ng-model="repChoice">
+            <option  value="representatives">Representatives</option>
+            <option value="senators">Senators</option>
+        </select>
+    </div>
+        </td>
+        <td>
+        <div class="dropdownState">
+        <select ng-model="stateChoice">
+            <option ng-repeat="state in usStates" value="{{state.abbreviation}}">{{state.name}}</option>
+        </select>
+    </div>
+        </td>
+    <td>
+    <div class="forminput">
+        <button ng-click="getApiInfo()">Submit</button>
+    </div>
+    </td>
+</tr>
+</table>
+<div class="outerTable">
+    <table>
+        <tr>
+            <td>
+                <div class="polList">
+                    <table class="politicianList">
+                        <tr ng-show="repList">
+                            <td>
+                                <h3>Rep List</h3>
+                            </td>
+                        </tr>
+                        <tr ng-show="repList">
+                            <td> Name </td>
+                            <td> Party </td>
+                        </tr>
+                        <tr ng-repeat="person in politicians">
+                            <td  class="highlightName" ng-click="displayDetail(person)">{{person.name}}</td>
+                            <td> {{person.party}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+
+            <td>
+                <div class="polDetail" ng-show="visable">
+                    <table class="repDetail">
+                        <tr>
+                            <td>
+                                <h3>Rep Detail</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{repDetail.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>District</td>
+                            <td>{{repDetail.district}}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone #</td>
+                            <td>{{repDetail.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>{{repDetail.office}}</td>
+                        </tr>
+                        <tr>
+                            <td>Website</td>
+                            <td><a href="{{repDetail.link}}" target="_blank">{{repDetail.link}}</a> </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
