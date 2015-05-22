@@ -32,7 +32,7 @@ angular.module('myApp.api', ['ngRoute'])
                 success(function (data) {
                     $scope.politicians = data.results;
 
-                });
+                }).
                 error(function()  {
                 alert("Not able to retrieve data at this time.")
             })
@@ -40,6 +40,8 @@ angular.module('myApp.api', ['ngRoute'])
         //get the person object and add it to scope, so that we can print it to the page easily
         $scope.displayDetail = function (person) {
             $scope.repDetail = person;
+            $scope.firstName = person.name.split(' ')[0];
+            $scope.lastName = person.name.split(' ')[1];
             $scope.visable = true;
         };
 

@@ -1,23 +1,23 @@
 
 <div id="apiView">
-<table>
-    <tr>
-        <td>
-           Choose Rep
-        </td>
-        <td>
-            Choose State
-        </td>
-        <td>
+<table class="dropdowns">
+    <!--<tr class="repTitle">-->
+        <!--<td>-->
+           <!--Choose Rep-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--Choose State-->
+        <!--</td>-->
+        <!--<td>-->
 
-        </td>
-    </tr>
+        <!--</td>-->
+    <!--</tr>-->
     <tr>
         <td>
     <div class="dropdownRep">
         <select ng-model="repChoice">
-            <option  value="representatives">Representatives</option>
-            <option value="senators">Senators</option>
+            <option  value="Representatives">Representatives</option>
+            <option value="Senators">Senators</option>
         </select>
     </div>
         </td>
@@ -40,20 +40,25 @@
         <tr>
             <td>
                 <div class="polList">
-                    <table class="politicianList">
-                        <tr ng-show="repList">
+                    <table >
+                        <tr class="polTitle" ng-show="repList">
                             <td>
-                                <h3>Rep List</h3>
+                                List /
+                            </td>
+                            <td class="blueText">
+                                {{repChoice}}
                             </td>
                         </tr>
-                        <tr ng-show="repList">
-                            <td> Name </td>
-                            <td> Party </td>
+                        <div class="shiftRight">
+                        <tr ng-show="repList" class="greyHighlight">
+                            <td > Name </td>
+                            <td class="party"> Party </td>
                         </tr>
-                        <tr ng-repeat="person in politicians">
+                        <tr class="bottomBorder" ng-repeat="person in politicians">
                             <td  class="highlightName" ng-click="displayDetail(person)">{{person.name}}</td>
-                            <td> {{person.party}}</td>
+                            <td class="party"> {{person.party}}</td>
                         </tr>
+                            </div>
                     </table>
                 </div>
             </td>
@@ -63,28 +68,32 @@
                     <table class="repDetail">
                         <tr>
                             <td>
-                                <h3>Rep Detail</h3>
+                                <div class="repInfo">Info</div>
                             </td>
                         </tr>
                         <tr>
-                            <td>Name</td>
-                            <td>{{repDetail.name}}</td>
+                            <!--<td>Name</td>-->
+                            <td class="greyHighlight">{{firstName}}</td>
                         </tr>
                         <tr>
-                            <td>District</td>
-                            <td>{{repDetail.district}}</td>
+                        <tr>
+                            <!--<td>Name</td>-->
+                            <td class="greyHighlight">{{lastName}}</td>
+                        </tr>
+                            <!--<td>District</td>-->
+                            <td class="greyHighlight">{{repDetail.district}}</td>
                         </tr>
                         <tr>
-                            <td>Phone #</td>
-                            <td>{{repDetail.phone}}</td>
+                            <!--<td>Phone #</td>-->
+                            <td class="greyHighlight">{{repDetail.phone}}</td>
                         </tr>
                         <tr>
-                            <td>Address</td>
-                            <td>{{repDetail.office}}</td>
+                            <!--<td>Address</td>-->
+                            <td class="greyHighlight">{{repDetail.office}}</td>
                         </tr>
                         <tr>
-                            <td>Website</td>
-                            <td><a href="{{repDetail.link}}" target="_blank">{{repDetail.link}}</a> </td>
+                            <!--<td>Website</td>-->
+                            <td class="greyHighlight"><a href="{{repDetail.link}}" target="_blank">{{repDetail.link}}</a> </td>
                         </tr>
 
                     </table>

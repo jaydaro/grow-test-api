@@ -6,11 +6,14 @@ body {
 
 .menu {
   list-style: none;
-  border-bottom: 0.1em solid black;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
+  border-bottom: 0.1em solid #ededed;
 }
 
+.blueText {
+  color: dodgerblue;
+}
 .menu > li {
   display: inline;
 }
@@ -29,36 +32,83 @@ body {
     float: right;
     position: relative;
 }
+.greyHighlight {
+    border-radius: 4px;
+    background-color: #ededed;
+    border-bottom: 0.4em solid white;
 
+}
 
 .polList {
     float: left;
     position: relative;
+    padding-right: 50px;
 }
     .polList .highlightName:hover {
         background-color: yellow;
         cursor: pointer;
     }
+     .polList td {
+         margin-right: 50px;
+     }
 
 .dropdownRep {
     float: left;
     position: relative;
-    padding: 5px 5px 5px 5px;
+    padding: 10px 5px 5px 20px;
 
 }
 
 .dropdownState {
     float: left;
     position: relative;
-    padding: 5px 5px 5px 5px;
+    padding: 10px 5px 5px 5px;
 }
 
 .outerTable {
     float: left;
     position: absolute;
     padding: 5px 5px 5px 5px;
+    width: 60%
 }
     .outerTable td {
         padding: 5px 5px 5px 5px;
         vertical-align: top;
     }
+
+.dropdowns {
+    background-color: cornflowerblue;
+    border-radius: 4px;
+    width: 60%;
+    margin-left: 10px;
+}
+
+.party {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.repTitle {
+    float: left;
+    position: relative;
+    padding-left: 20px;
+}
+
+.polTitle {
+    float: left;
+    position: relative;
+    padding-left: 5px;
+    font-size: 18pt;
+}
+
+.repInfo {
+    font-size: 18pt;
+}
+
+.shiftRight {
+    margin-left: 10px;
+}
+
+.bottomBorder {
+    border-bottom: 0.1em solid #ededed;
+}
